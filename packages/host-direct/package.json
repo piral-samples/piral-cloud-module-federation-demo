@@ -1,0 +1,21 @@
+{
+  "name": "host-direct",
+  "version": "1.0.0",
+  "description": "App shell using direct / known imports",
+  "keywords": [],
+  "author": "Florian Rappl",
+  "license": "MIT",
+  "scripts": {
+    "start": "rspack serve",
+    "preview": "npx http-server dist --port 1234 --cors",
+    "build": "rspack build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@rspack/core": "^0.5.5",
+    "@rspack/cli": "^0.5.5",
+    "publish-microfrontend": "1.5.0",
+    "typescript": "^5"
+  }
+}

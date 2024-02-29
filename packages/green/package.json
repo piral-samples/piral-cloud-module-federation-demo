@@ -1,0 +1,28 @@
+{
+  "name": "green",
+  "version": "1.0.0",
+  "description": "Micro frontend of the green team",
+  "keywords": [],
+  "author": "Florian Rappl",
+  "license": "MIT",
+  "main": "dist/remoteEntry.js",
+  "scripts": {
+    "start": "rspack serve",
+    "preview": "npx http-server dist --port 2003 --cors",
+    "publish:mf": "npx publish-microfrontend --url http://localhost:9000/api/v1/pilet/module-demo --interactive",
+    "build": "rspack build"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@rspack/core": "^0.5.5",
+    "@rspack/cli": "^0.5.5",
+    "publish-microfrontend": "1.5.0",
+    "typescript": "^5"
+  }
+}
