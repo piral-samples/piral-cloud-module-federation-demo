@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run build",
     "publish:mf": "lerna run publish:mf",
-    "run:feed": "lerna run preview --stream --scope host-indirect",
+    "run:feed": "lerna run start --stream --scope host-indirect",
     "run:local": "lerna run start --stream --ignore host-indirect"
   },
   "devDependencies": {

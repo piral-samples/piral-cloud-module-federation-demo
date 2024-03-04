@@ -49,6 +49,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".json", ".wasm"],
+    alias: {
+      '@shared/loader': path.resolve(__dirname, '../shared/loader.ts'),
+    },
   },
   devServer: {
     port: 2003,

@@ -9,10 +9,7 @@
     "esModuleInterop": true,
     "jsx": "react",
     "allowJs": true,
-    "checkJs": true,
-    "paths": {
-      "@shared/*": ["../shared/*"]
-    }
+    "checkJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["*.ts", "*.tsx"]
 }

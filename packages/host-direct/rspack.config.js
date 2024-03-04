@@ -2,9 +2,6 @@ const rspack = require("@rspack/core");
 const path = require("path");
 
 const mf = new rspack.container.ModuleFederationPlugin({
-  remotes: {
-    red: 'red@http://localhost:2001/remoteEntry.js'
-  },
   shared: {
     react: { singleton: true },
     "react-dom": { singleton: true },
@@ -50,6 +47,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".json", ".wasm"],
+    alias: {
+      '@shared/loader': path.resolve(__dirname, '../shared/loader.ts'),
+    },
   },
   devServer: {
     port: 1234,

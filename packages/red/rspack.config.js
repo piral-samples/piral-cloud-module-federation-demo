@@ -7,10 +7,7 @@ const mf = new rspack.container.ModuleFederationPlugin({
   exposes: {
     "./product-page": "./src/product-page.tsx",
   },
-  remotes: {
-    blue: 'blue@http://localhost:2002/remoteEntry.js',
-    green: 'green@http://localhost:2003/remoteEntry.js',
-  },
+  remotes: {},
   shared: {
     react: { singleton: true },
     "react-dom": { singleton: true },
@@ -52,6 +49,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".json", ".wasm"],
+    alias: {
+      '@shared/loader': path.resolve(__dirname, '../shared/loader.ts'),
+    },
   },
   devServer: {
     port: 2001,

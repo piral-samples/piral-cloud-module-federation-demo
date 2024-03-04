@@ -21,6 +21,7 @@ This repository contains the following packages / code elements:
 - [mf-blue](./packages/mf-blue/): the MF with the buy and basket components from the blue team
 - [mf-green](./packages/mf-green/): the MF with the recommendations component from the green team
 - [mf-red](./packages/mf-red/): the MF with the product details component from the red team
+- [shared](./packages/shared/): the shared loader that enables cross-MF component sharing
 
 ## Publishing to a Discovery Service
 

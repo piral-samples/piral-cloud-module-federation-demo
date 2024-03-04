@@ -1,5 +1,8 @@
+import { setup } from "@shared/loader";
 import { renderBasketInfo } from "./basket-info";
 import { renderBuyButton } from "./buy-button";
+
+setup();
 
 const app = document.querySelector('#app');
 const basketInfo = app.appendChild(document.createElement('div'));

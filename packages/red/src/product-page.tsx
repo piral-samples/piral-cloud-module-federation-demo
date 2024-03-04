@@ -38,9 +38,11 @@ const product = {
   ],
 };
 
-const BasketInfo = React.lazy(() => import('blue/basketInfo'));
-const BuyButton = React.lazy(() => import('blue/buyButton'));
-const ProductRecommendations = React.lazy(() => import('green/recommendations'));
+const BasketInfo = React.lazy(() => window.loadRemote("blue/basketInfo"));
+const BuyButton = React.lazy(() => window.loadRemote("blue/buyButton"));
+const ProductRecommendations = React.lazy(() =>
+  window.loadRemote("green/recommendations")
+);
 
 function getCurrent(sku: string) {
   return product.variants.find((v) => v.sku === sku) || product.variants[0];

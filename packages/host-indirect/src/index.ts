@@ -1,15 +1,19 @@
 import "./style.css";
-import { init, loadRemote } from "@module-federation/runtime";
+import { setup } from "@shared/loader";
 
-fetch("http://localhost:9000/api/v1/pilet/microfrontends")
+fetch("https://module-demo.my.dev.piral.cloud/api/v1/importmap")
   .then((res) => res.json())
-  .then(async ({ remotes }) => {
-    init({
+  .then(async ({ imports }) => {
+    const remotes = Object.entries(imports).map(
+      ([name, entry]: [string, string]) => ({ name, entry })
+    );
+
+    setup({
       name: "host",
       remotes, // array of objects: { name, entry }
     });
 
-    const { renderProductPage }: any = await loadRemote("red/product-page");
+    const { renderProductPage }: any = await window.loadRemote("red/product-page");
     const root = document.querySelector("#app");
     renderProductPage(root);
   });
