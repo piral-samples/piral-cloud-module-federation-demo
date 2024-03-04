@@ -9,7 +9,7 @@
   "scripts": {
     "start": "rspack serve",
     "preview": "npx http-server dist --port 2003 --cors",
-    "publish:mf": "npx publish-microfrontend --url https://feed.dev.piral.cloud/api/v1/pilet/module-demo --api-key 156ec80b17bb31b6cc304667af6bfaec97c8d2be77dd51f38edb85b6f04017ba",
+    "publish:mf": "npx publish-microfrontend --url https://feed.dev.piral.cloud/api/v1/pilet/module-demo --interactive",
     "build": "rspack build"
   },
   "dependencies": {
